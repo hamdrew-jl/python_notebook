@@ -4,7 +4,7 @@
 
 
 
-* python_practice_turtle
+
 02-python-intermediate-Turtle & the Graphical User Interface(GUI)
 [Python] Practice on turtle module
 1. Polygon draw with random color
