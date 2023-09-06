@@ -1,8 +1,10 @@
+# Method 1
 from turtle import Turtle, Screen
 import random
 import turtle as t
 
-# set color mode, or that will be string for default setting
+
+# set colormode, or that will be string for default setting
 t.colormode(255)
 turtle = Turtle()
 
@@ -37,3 +39,41 @@ draw_spirograph(10)
 # Output
 screen = Screen()
 screen.exitonclick()
+
+
+
+
+
+# Method 2
+"""Input the number of circles you need to draw"""
+# from turtle import Turtle, Screen
+# import turtle as t
+# import random
+
+
+
+# t.colormode(255)
+# turtle = Turtle()
+
+# def random_color():
+#     r = random.randint(0,255)
+#     g = random.randint(0, 255)
+#     b = random.randint(0, 255)
+#     return r, g, b
+
+
+# def draw_circlegraph(num):
+
+#     for c in range(num):
+#         turtle.color(random_color())
+#         turtle.circle(50)
+#         turtle.left(360/num)
+
+
+# turtle.speed("fastest")
+
+# draw_circlegraph(20)
+
+
+# screen = Screen()
+# screen.exitonclick()
