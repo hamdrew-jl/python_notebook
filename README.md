@@ -4,6 +4,9 @@
 
 
 
+01-ptython-beginner-higher & lower question game
+01.06
+![image](https://github.com/hamdrew-jl/python_notebook/assets/141601957/07d97c4b-9a61-45af-9183-32b508736bcc)
 
 02-python-intermediate-Turtle & the Graphical User Interface(GUI)
 [Python] Practice on turtle module
