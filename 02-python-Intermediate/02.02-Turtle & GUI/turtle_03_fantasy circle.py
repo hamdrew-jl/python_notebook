@@ -1,4 +1,5 @@
-# Method 1  interact with user
+# Method 1  
+"""interact with user"""
 from turtle import Turtle, Screen, colormode
 import random
 
