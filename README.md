@@ -1,7 +1,8 @@
 # Python notebook
-> Personal learning
-> Udemy:100 Days of Code: The Complete Python Pro Bootcamp for 2023 (Angela YU)
 
+> Udemy:100 Days of Code: The Complete Python Pro Bootcamp for 2023 (Angela YU)
+> 
+Personal learning records
 
 
 
