@@ -28,7 +28,8 @@ screen.exitonclick()
 
 
 # _______________________________________________________________________________
-# Method 2  headng
+# Method 2  
+"""use headng()"""
 # from turtle import Turtle, Screen
 # import random
 # import turtle as t
