@@ -1,11 +1,12 @@
-# Damien Hirst's painting: Anitipyrylazo III
+# Damien Hirst's painting
 # Crack color in this painting, and use those colors to generate a random canvas of spot paintings
 # use package colorgram
 
+# ---------------------------------------------------------------------------
 # import colorgram
-
  """use colorgram to extract the color,
  and testing out these colors into new color_list"""
+
 # # rgb_color = []
 # # colors = colorgram.extract('damien-hirst-lactulose.jpg', 15)
 # #
