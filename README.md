@@ -6,7 +6,7 @@ Personal learning records
 
 
 
-## 01-ptython-beginner-higher & lower question game
+## 01-python-beginner-higher & lower question game
 01.06
 
 ![image](https://github.com/hamdrew-jl/python_notebook/assets/141601957/07d97c4b-9a61-45af-9183-32b508736bcc)
@@ -19,4 +19,5 @@ Personal learning records
 
 ## 02-python-intermediate-Turtle Race Game
 
-![image](https://github.com/hamdrew-jl/python_notebook/assets/141601957/93f5cedd-55fb-49aa-8857-1e77d61a5e06)
+![image](https://github.com/hamdrew-jl/python_notebook/assets/141601957/cee87411-dd97-42af-8014-a66e54602a8d)
+
