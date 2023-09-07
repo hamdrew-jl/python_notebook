@@ -88,16 +88,4 @@ screen.exitonclick()
    tommy.color = purple
    
    ```
-## 02 Turtle Racing Game
-* Build  a turtle race
-* Know the concept of state and instances
-* Multiple turtles to join the game.
-
-### Objectives
-* Start a popup that asks us to bet which turtle will win the race and choose a color.
-* Turtles lined up in the starting position
-* Each turtle starts to make random steps toward the right edge of the screen.
-* Once a turtle reaches the right edge of the screen, the turtle will be the winner
-* Output the result. Let us know if we win or lose and the winner's color.
-
   
