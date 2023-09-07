@@ -68,7 +68,6 @@ def clear_drawing():
 
 screen.listen()
 screen.onkey(key="w", fun=forward)
-
 screen.onkey(key="s", fun=backward)
 screen.onkey(key="a", fun=counter_clockwise)
 screen.onkey(key="d", fun=clockwise)
