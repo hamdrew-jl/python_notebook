@@ -16,7 +16,7 @@ def randomcolor():
     return r, g, b
 
 
-def circle_graphic(size_c, angle_c):
+def draw_spirograph(size_c, angle_c):
     for c in range(loop_number):
         turtle.color(randomcolor())
         turtle.circle(size_c)
@@ -30,7 +30,7 @@ loop_number = int(360 / angle)
 # change the speed
 turtle.speed("fastest")
 
-circle_graphic(size, angle)
+draw_spirograph(size, angle)
 
 # Output
 screen = Screen()
@@ -96,7 +96,7 @@ screen.exitonclick()
 #     return r, g, b
 
 
-# def draw_circlegraph(num):
+# def draw_spirograph(num):
 
 #     for c in range(num):
 #         turtle.color(random_color())
@@ -106,7 +106,7 @@ screen.exitonclick()
 
 # turtle.speed("fastest")
 
-# draw_circlegraph(20)
+# draw_spirograph(20)
 
 # screen = Screen()
 # screen.exitonclick()
