@@ -15,7 +15,8 @@
 
 ![image](https://github.com/hamdrew-jl/python_notebook/assets/141601957/c48357f1-135f-4b93-8925-473d828d6c73)
 
-![image](https://github.com/hamdrew-jl/python_notebook/assets/141601957/ed85d43a-98e5-4a04-95ca-15403f00cdea)
+![image](https://github.com/hamdrew-jl/python_notebook/assets/141601957/8ac7e66b-eb82-4e95-90d9-16be871827ff)
+
 
 
 ## Steps
@@ -65,7 +66,7 @@ screen.exitonclick()
 * note: We can change the background color and add athletic track to make game more fun!
 * also use turtle.write()method could write word in the game
   
-### 01 add title
+### 01 Add title
 
 ```python
 # title
@@ -75,14 +76,38 @@ t.goto(-80, 175)
 t.write("Welcome to The Race!", font=("Arialblack", 10))
 
 ```
-### 02 change the background color
+### 02 Change the background color
 
 ```python
 screen.bgcolor("dark sea green")
 
 ```
+### 03 Add finish flag
 
-### 03 add athletic track
+```python
+def finish_flag():
+    """create finish flag"""
+    flag = Turtle("square")
+    flag.penup()
+    flag.speed("fastest")
+    x = 200
+    y = 180
+
+    for i in range(9):
+        flag.goto(x, y)
+        flag.stamp()
+        x += 20
+        y -= 20
+        flag.goto(x, y)
+        flag.stamp()
+        x -= 20
+        y -= 20
+        flag.goto(x, y)
+        flag.stamp()
+
+```
+
+### 04 Add athletic track (need to be optimized)
 
 ```python
 def athletic_track():
