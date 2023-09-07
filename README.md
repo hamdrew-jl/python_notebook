@@ -23,3 +23,8 @@
 3. Fantasy circles
 
 ![image](https://github.com/hamdrew-jl/python_notebook/assets/141601957/eee85ccd-4ebc-4313-9586-16c4d997ed71)
+
+4. generate a random canvas of spot paintings, refer Damien Hirst's painting
+
+![image](https://github.com/hamdrew-jl/python_notebook/assets/141601957/f3eb6a94-1f91-40cc-8ccb-cfa0040911b0)
+
