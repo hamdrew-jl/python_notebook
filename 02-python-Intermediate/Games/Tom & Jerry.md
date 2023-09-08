@@ -15,39 +15,40 @@ import turtle
 import time
 import random
 
-playground = turtle.Screen()
-playground.title("Tom & Jerry")
-playground.register_shape("tom1.gif")
-playground.register_shape("jerry2.gif")
+screen = turtle.Screen()
+screen.title("Tom & Jerry")
+screen.register_shape("tom1.gif")
+screen.register_shape("jerry2.gif")
 
 # listen
-playground.listen()
+screen.listen()
 
-writer = turtle.Turtle()
-writer.color("black")
-writer.hideturtle()
-writer.penup()
-writer.home()
-writer.write("Tom & Jerry", align="center", font=("Arial", 50, "bold"))
-writer.goto(0, -50)
-writer.write("Game begin in few seconds....", align="center", font=("Arial", 20, "bold"))
-writer.goto(0, -100)
-writer.write("Keyboard control Jerry (↑ ↓ ← →)", align="center", font=("Arial", 20, "bold"))
+director = turtle.Turtle()
+director.hideturtle()
+director.color("black")
+director.penup()
+director.home()
+director.write("Tom & Jerry", align="center", font=("Arial", 50, "bold"))
+director.goto(0, -50)
+director.write("Game begin in few seconds....", align="center", font=("Arial", 20, "bold"))
+director.goto(0, -100)
+director.write("Keyboard control Jerry (↑ ↓ ← →)", align="center", font=("Arial", 20, "bold"))
 time.sleep(1)
 
 # counting down
-writer.clear()
-writer.write("3", align="center", font=("Arial", 50, "bold"))
+director.clear()
+director.write("3", align="center", font=("Arial", 50, "bold"))
 time.sleep(1)
-writer.clear()
-writer.write("2", align="center", font=("Arial", 50, "bold"))
+director.clear()
+director.write("2", align="center", font=("Arial", 50, "bold"))
 time.sleep(1)
-writer.clear()
-writer.write("1", align="center", font=("Arial", 50, "bold"))
+director.clear()
+director.write("1", align="center", font=("Arial", 50, "bold"))
 time.sleep(1)
-writer.clear()
+director.clear()
 start = time.time()
 
+# Create Tom & Jerry Object
 tom = turtle.Turtle()
 tom.shape("tom1.gif")
 tom.penup()
@@ -61,7 +62,7 @@ jerry.penup()
 jerry.goto(random.randint(-200, 200), random.randint(-200, 200))
 jerry.color("brown")
 
-
+# Movement
 def up():
     jerry.setheading(90)
     jerry.forward(20)
@@ -82,18 +83,19 @@ def right():
     jerry.forward(20)
 
 
-playground.onkey(up, "Up")
-playground.onkey(down, "Down")
-playground.onkey(left, "Left")
-playground.onkey(right, "Right")
+screen.onkey(up, "Up")
+screen.onkey(down, "Down")
+screen.onkey(left, "Left")
+screen.onkey(right, "Right")
 
+# Prepare the game
 is_go_on = True
 while is_go_on:
     tom.setheading(tom.towards(jerry))
     tom.forward(5)
     if tom.distance(jerry) < 10:
         end = time.time()
-        playground.clear()
+        screen.clear()
         jerry.goto(0, 0)
         jerry.write("Game Over", align="center", font=("Arial", 50, "bold"))
         jerry.goto(0, -50)
@@ -104,6 +106,6 @@ while is_go_on:
         turtle.mainloop()
         is_go_on = False
 
-
-playground.exitonclick()
+# Output
+screen.exitonclick()
 ```
