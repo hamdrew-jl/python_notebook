@@ -17,6 +17,14 @@
 
 ## Self-practice
 
+I practice on this program a bit
+
+* First: (Draw tracer need more time so I deleted in the lastest version)
+
+![image](https://github.com/hamdrew-jl/python_notebook/assets/141601957/557286d8-a601-4801-8024-c92536894407)
+
+* Second:
+  
 ![image](https://github.com/hamdrew-jl/python_notebook/assets/141601957/90e632f5-ead3-4b15-b2fa-26812197e819)
 
 
@@ -73,6 +81,9 @@ screen.exitonclick()
   
 ### 02 Add cover
 
+![image](https://github.com/hamdrew-jl/python_notebook/assets/141601957/cf55760a-adb1-49bf-bd4f-1254be3ddd94)
+
+
 ```python
 # title
 director = t.Turtle()
@@ -100,6 +111,10 @@ screen.clear()
 time.sleep(1)
 ```
 ### 04 Add start line
+
+![image](https://github.com/hamdrew-jl/python_notebook/assets/141601957/125817b0-97e3-4525-bbc0-e32013faddfd)
+
+
 ```python
 def start_line():
     start = t.Turtle()
@@ -114,7 +129,11 @@ def start_line():
 ```
 
 ### 05 Add finish flag
-* Method 1 
+* Method 1
+  
+![image](https://github.com/hamdrew-jl/python_notebook/assets/141601957/e740db8f-09aa-496f-9ee5-2627f200891e)
+
+  
 ```python
 def finish_flag():
     """create finish flag"""
