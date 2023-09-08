@@ -1,13 +1,7 @@
 # Tom & Jerry
 
 
-![image](https://github.com/hamdrew-jl/python_notebook/assets/141601957/e373234f-e6f8-4310-8ce8-458273808a05)
-
-
-![image](https://github.com/hamdrew-jl/python_notebook/assets/141601957/e35f8902-fd40-4627-ac60-9e974a21deae)
-
-
-![image](https://github.com/hamdrew-jl/python_notebook/assets/141601957/2c3cdc3a-351a-4a33-b702-9f5adbadaecd)
+![image](https://github.com/hamdrew-jl/python_notebook/assets/141601957/27137836-c10b-42f3-937a-5c2ec4b8d2ab)
 
 
 ```python
