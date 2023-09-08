@@ -1,0 +1,109 @@
+# Tom & Jerry
+
+
+![image](https://github.com/hamdrew-jl/python_notebook/assets/141601957/e373234f-e6f8-4310-8ce8-458273808a05)
+
+
+![image](https://github.com/hamdrew-jl/python_notebook/assets/141601957/e35f8902-fd40-4627-ac60-9e974a21deae)
+
+
+![image](https://github.com/hamdrew-jl/python_notebook/assets/141601957/2c3cdc3a-351a-4a33-b702-9f5adbadaecd)
+
+
+```python
+import turtle
+import time
+import random
+
+playground = turtle.Screen()
+playground.title("Tom & Jerry")
+playground.register_shape("tom1.gif")
+playground.register_shape("jerry2.gif")
+
+# listen
+playground.listen()
+
+writer = turtle.Turtle()
+writer.color("black")
+writer.hideturtle()
+writer.penup()
+writer.home()
+writer.write("Tom & Jerry", align="center", font=("Arial", 50, "bold"))
+writer.goto(0, -50)
+writer.write("Game begin in few seconds....", align="center", font=("Arial", 20, "bold"))
+writer.goto(0, -100)
+writer.write("Keyboard control Jerry (↑ ↓ ← →)", align="center", font=("Arial", 20, "bold"))
+time.sleep(1)
+
+# counting down
+writer.clear()
+writer.write("3", align="center", font=("Arial", 50, "bold"))
+time.sleep(1)
+writer.clear()
+writer.write("2", align="center", font=("Arial", 50, "bold"))
+time.sleep(1)
+writer.clear()
+writer.write("1", align="center", font=("Arial", 50, "bold"))
+time.sleep(1)
+writer.clear()
+start = time.time()
+
+tom = turtle.Turtle()
+tom.shape("tom1.gif")
+tom.penup()
+tom.goto(random.randint(-200, 200), random.randint(-200, 200))
+tom.penup()
+
+jerry = turtle.Turtle()
+jerry.shape("jerry2.gif")
+jerry.speed(0)
+jerry.penup()
+jerry.goto(random.randint(-200, 200), random.randint(-200, 200))
+jerry.color("brown")
+
+
+def up():
+    jerry.setheading(90)
+    jerry.forward(20)
+
+
+def down():
+    jerry.setheading(270)
+    jerry.forward(20)
+
+
+def left():
+    jerry.setheading(180)
+    jerry.forward(20)
+
+
+def right():
+    jerry.setheading(0)
+    jerry.forward(20)
+
+
+playground.onkey(up, "Up")
+playground.onkey(down, "Down")
+playground.onkey(left, "Left")
+playground.onkey(right, "Right")
+
+is_go_on = True
+while is_go_on:
+    tom.setheading(tom.towards(jerry))
+    tom.forward(5)
+    if tom.distance(jerry) < 10:
+        end = time.time()
+        playground.clear()
+        jerry.goto(0, 0)
+        jerry.write("Game Over", align="center", font=("Arial", 50, "bold"))
+        jerry.goto(0, -50)
+        jerry.write("You stand {:.1f}s".format(end-start), align="center", font=("Arial", 20, "bold"))
+        tom.penup()
+        tom.goto(-30, -140)
+        tom.stamp()
+        turtle.mainloop()
+        is_go_on = False
+
+
+playground.exitonclick()
+```
