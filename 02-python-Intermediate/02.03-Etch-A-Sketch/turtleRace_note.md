@@ -13,7 +13,8 @@
 
 ## Tutorial version
   
-![image](https://github.com/hamdrew-jl/python_notebook/assets/141601957/f0c139ec-e094-49ea-bc26-cac588333187)
+![image](https://github.com/hamdrew-jl/python_notebook/assets/141601957/c2b6081f-da6d-4c53-b757-7ab294522e06)
+
 
 ## Self-practice
 
