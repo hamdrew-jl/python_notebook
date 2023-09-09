@@ -1,5 +1,8 @@
 # SnakeGame(Classic)
 
+
+
+
 Split into seven steps
 * 01 create a snake body
 * 02 move the snake
@@ -8,6 +11,8 @@ Split into seven steps
 * 05 create a scoreboard
 * 06 detect collision with wall
 * 07 detect collision with tail
+
+![image](https://github.com/hamdrew-jl/python_notebook/assets/141601957/59583fb5-ed76-4863-a579-14555b1be80c)
 
 ## 01 create a snake body
 ### 1.1 set the screen
