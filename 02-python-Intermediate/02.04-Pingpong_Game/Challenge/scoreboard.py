@@ -32,8 +32,10 @@ class Scoreboard(Turtle):
         self.score_r += 1
         self.update_score()
 
-    def winner(self):
-        if self.score_r == 11:
-            self.write("The winner is Right", align=ALIGNMENT, font=FONT)
-        if self.score_l == 11:
-            self.write("The winner is Left", align=ALIGNMENT, font=FONT)
+
+    # TODO finish the winner     
+    # def winner(self):
+    #     if self.score_r == 11:
+    #         self.write("The winner is Right", align=ALIGNMENT, font=FONT)
+    #     if self.score_l == 11:
+    #         self.write("The winner is Left", align=ALIGNMENT, font=FONT)
