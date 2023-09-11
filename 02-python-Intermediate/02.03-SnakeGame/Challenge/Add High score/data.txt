@@ -1,1 +1,2 @@
-0
+# Record the high score
+0 
