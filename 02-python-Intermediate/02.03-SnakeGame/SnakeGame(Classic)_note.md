@@ -12,6 +12,11 @@ Split into seven steps
 
 ![image](https://github.com/hamdrew-jl/python_notebook/assets/141601957/59583fb5-ed76-4863-a579-14555b1be80c)
 
+* Record the High score when playing the game -> go to challenge ->add high score file
+
+![image](https://github.com/hamdrew-jl/python_notebook/assets/141601957/ff377d90-9f85-4464-a6df-b36762ffcdd6)
+
+
 ## 01 create a snake body
 
 ### 1.1 set the screen
