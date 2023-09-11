@@ -1,5 +1,7 @@
 # Pingpong Game
 
+![image](https://github.com/hamdrew-jl/python_notebook/assets/141601957/d251ba2e-06e2-457b-a9c6-a83f5ffbd9b9)
+
 ## 01 Screen Setting and Background image drawing
 ```python
 # screen setting
