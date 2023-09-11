@@ -3,6 +3,10 @@
 
 ![image](https://github.com/hamdrew-jl/python_notebook/assets/141601957/27137836-c10b-42f3-937a-5c2ec4b8d2ab)
 
+![tom1](https://github.com/hamdrew-jl/python_notebook/assets/141601957/604ffc41-7cb2-4b03-9662-145562c8ada3)
+
+![jerry2](https://github.com/hamdrew-jl/python_notebook/assets/141601957/ba4a9f44-d3ba-4772-83c8-fe6563dc8799)
+
 
 ```python
 import turtle
