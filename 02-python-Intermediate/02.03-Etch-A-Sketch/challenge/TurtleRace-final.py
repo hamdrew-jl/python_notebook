@@ -17,7 +17,7 @@ screen.bgcolor("gainsboro")
 time.sleep(1)
 director.goto(0, -150)
 director.write("Color Choose: red/ orange/ yellow/ green/ cyan/ blue/ purple", align="center",  font=("Arial", 15, "bold"))
-
+screen.tracer(0)
 # popup
 text_guess = t.textinput("Make your bet", "Which turtle will win? Enter a color: ")
 
@@ -38,8 +38,21 @@ def start_line():
     start.forward(350)
 
 
-def final_flag():
+def athletic_tracker():
+    tracker = t.Turtle()
+    tracker.pensize(3)
+    tracker.color("lightgrey")
+    tracker.speed(0)
+    tracker.hideturtle()
+    for y in range(-140, 180, 40):
+        x_pos = -240
+        tracker.penup()
+        tracker.goto(x_pos, y)
+        tracker.pendown()
+        tracker.forward(600)
 
+
+def final_flag():
     for i in range(2):
         flag = t.Turtle("square")
         flag.speed(0)
@@ -48,13 +61,13 @@ def final_flag():
         flag.color("black")
         flag.goto(350, 200)
         flag.setheading(270)
-        for y in range(-200, 200, 40):
+        for y in range(-220, 200, 40):
             flag.stamp()
             flag.forward(40)
         flag.color("white")
         flag.goto(350, 180)
         flag.setheading(270)
-        for y in range(-180, 180, 40):
+        for y in range(-200, 180, 40):
             flag.stamp()
             flag.forward(40)
 
@@ -80,12 +93,13 @@ if text_guess:
     screen.bgcolor("dark sea green")
 
     start_line()
+    athletic_tracker()
     final_flag()
     all_t = multiple_turtles()
     time.sleep(1)
 
     while is_going_on:
-
+        screen.update()
         for turtle_l in all_t:
             if turtle_l.xcor() > 330:
                 is_going_on = False
