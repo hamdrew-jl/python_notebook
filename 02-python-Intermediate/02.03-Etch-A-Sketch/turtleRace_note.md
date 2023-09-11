@@ -25,8 +25,11 @@ I practice on this program a bit
 ![image](https://github.com/hamdrew-jl/python_notebook/assets/141601957/557286d8-a601-4801-8024-c92536894407)
 
 * Second:
+
+![image](https://github.com/hamdrew-jl/python_notebook/assets/141601957/f8d18839-e789-4fea-9fdb-63d19998fd58)
+
   
-![image](https://github.com/hamdrew-jl/python_notebook/assets/141601957/90e632f5-ead3-4b15-b2fa-26812197e819)
+
 
 
 
@@ -183,7 +186,7 @@ def final_flag():
             flag.forward(40)
 ```
   
-### 06 Add final result show on the screen
+### 06 Add final result show on the screen and console
 
 ![image](https://github.com/hamdrew-jl/python_notebook/assets/141601957/16c259c1-2ae8-4aea-8b0c-f37fa96d1aef)
 
@@ -192,11 +195,22 @@ def final_flag():
 director.goto(0, 0)
 director.write("The winner is: ", align="center", font=("Arial", 30, "bold"))
 turtle_l.stamp()
-turtle_l.goto(0, -50)
+turtle_l.goto(0, -30)
 turtle_l.shapesize(2)
 
+if text_guess == turtle_l.color():
+    print(f"You win. The winner is {turtle_l.pencolor()} turtle.")
+    director.goto(0, -80)
+    director.write(f"You win. The winner is {turtle_l.pencolor()} turtle", align="center",
+                   font=("Arial", 20, "bold"))
+else:
+    print(f"You lose. The winner is {turtle_l.pencolor()} turtle.")
+    director.goto(0, -80)
+    director.write("You lose", align="center",
+                   font=("Arial", 20, "bold"))
+
 ```
-if player didn't guess the color or cancel the popup, the screen will show 'Bye'
+if the player didn't guess the color or cancel the popup, the screen will show 'Bye'
 
 
 ![image](https://github.com/hamdrew-jl/python_notebook/assets/141601957/1c98223f-0ece-49c7-b836-794c86da39d9)
@@ -210,23 +224,27 @@ else:
 
 
 
-### 07 Add athletic track (need to be optimized)
+### 07 Add athletic tracker 
 
+![image](https://github.com/hamdrew-jl/python_notebook/assets/141601957/52e4cfd4-3521-40bb-ad33-8dd606090934)
+
+
+* use turtle.tracer() & turtle.update() to saving the drawing time
+  
 ```python
-def athletic_track():
-    """create athletic track"""
-    track = Turtle()
-    track.speed(0)
-    for y in range(-180, 210, 60):
-        for x in range(-280, 310, 60):
-            track.color("white smoke")
-            track.pensize(10)
-            track.penup()
-            track.goto(x, y)
-            track.pendown()
-            track.forward(100)
+def athletic_tracker():
+    tracker = t.Turtle()
+    tracker.pensize(3)
+    tracker.color("lightgrey")
+    tracker.speed(0)
+    tracker.hideturtle()
+    for y in range(-140, 180, 40):
+        x_pos = -240
+        tracker.penup()
+        tracker.goto(x_pos, y)
+        tracker.pendown()
+        tracker.forward(600)
 ```
-
 ### Full code
 ```python
 import turtle as t
@@ -243,16 +261,17 @@ director = t.Turtle()
 director.hideturtle()
 director.home()
 director.penup()
-director.write("Turtle Race", align="center",  font=("Arial", 40, "bold"))
+director.write("Turtle Race", align="center", font=("Arial", 40, "bold"))
 screen.bgcolor("gainsboro")
 time.sleep(1)
 director.goto(0, -150)
-director.write("Color Choose: red/ orange/ yellow/ green/ cyan/ blue/ purple", align="center",  font=("Arial", 15, "bold"))
-
+director.write("Color Choose: red/ orange/ yellow/ green/ cyan/ blue/ purple", align="center",
+               font=("Arial", 15, "bold"))
+screen.tracer(0)
 # popup
 text_guess = t.textinput("Make your bet", "Which turtle will win? Enter a color: ")
 
-director.write("Let's race! ", align="center",  font=("Arial", 40, "bold"))
+director.write("Let's race! ", align="center", font=("Arial", 40, "bold"))
 screen.clear()
 time.sleep(1)
 
@@ -269,8 +288,21 @@ def start_line():
     start.forward(350)
 
 
-def final_flag():
+def athletic_tracker():
+    tracker = t.Turtle()
+    tracker.pensize(3)
+    tracker.color("lightgrey")
+    tracker.speed(0)
+    tracker.hideturtle()
+    for y in range(-140, 180, 40):
+        x_pos = -240
+        tracker.penup()
+        tracker.goto(x_pos, y)
+        tracker.pendown()
+        tracker.forward(600)
 
+
+def final_flag():
     for i in range(2):
         flag = t.Turtle("square")
         flag.speed(0)
@@ -279,13 +311,13 @@ def final_flag():
         flag.color("black")
         flag.goto(350, 200)
         flag.setheading(270)
-        for y in range(-200, 200, 40):
+        for y in range(-220, 200, 40):
             flag.stamp()
             flag.forward(40)
         flag.color("white")
         flag.goto(350, 180)
         flag.setheading(270)
-        for y in range(-180, 180, 40):
+        for y in range(-200, 180, 40):
             flag.stamp()
             flag.forward(40)
 
@@ -311,28 +343,35 @@ if text_guess:
     screen.bgcolor("dark sea green")
 
     start_line()
+    athletic_tracker()
     final_flag()
     all_t = multiple_turtles()
     time.sleep(1)
 
     while is_going_on:
-
+        screen.update()
         for turtle_l in all_t:
-            if turtle_l.xcor() > 330:
+            if turtle_l.xcor() >= 330: # Detect the winner
                 is_going_on = False
 
                 director.goto(0, 0)
                 director.write("The winner is: ", align="center", font=("Arial", 30, "bold"))
                 turtle_l.stamp()
-                turtle_l.goto(0, -50)
+                turtle_l.goto(0, -30)
                 turtle_l.shapesize(2)
 
                 if text_guess == turtle_l.color():
-                    print(f"You lose. The winner is {turtle_l.pencolor()} turtle.")
-                else:
                     print(f"You win. The winner is {turtle_l.pencolor()} turtle.")
+                    director.goto(0, -80)
+                    director.write(f"You win. The winner is {turtle_l.pencolor()} turtle", align="center",
+                                   font=("Arial", 20, "bold"))
+                else:
+                    print(f"You lose. The winner is {turtle_l.pencolor()} turtle.")
+                    director.goto(0, -80)
+                    director.write("You lose", align="center",
+                                   font=("Arial", 20, "bold"))
 
-            turtle_l.forward(random.randint(2, 15))
+            turtle_l.forward(random.randint(0, 15))
 else:
     director.home()
     director.write("Bye", align="center", font=("Arial", 40, "bold"))
