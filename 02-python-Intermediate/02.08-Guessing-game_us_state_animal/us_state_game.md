@@ -96,6 +96,17 @@ while len(already_guessed) < 50:
         score += 1
 
 ```
+Note: After learning list comprehension, change some code above.
+```python
+missing_states = []
+for state in state_list:
+     if state not in already_guessed:
+         missing_states.append(state)
+```
+* Change into
+```python
+missing_states = [state for state in state_list if state not in already_guessed]
+```
 
 ### Full Code (Self Write)
 
