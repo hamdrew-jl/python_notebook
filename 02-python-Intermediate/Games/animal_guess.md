@@ -1,12 +1,14 @@
 # Animal Guessing Game
 
-![img_1.png](image/img_1.png)
+![image](https://github.com/hamdrew-jl/python_notebook/assets/141601957/5bcae0c5-af64-44ec-a2e4-428d9532cfe8)
+
 
 
 ## 1. Make the background pic
 * Prepared in Photoshop or Powerpoint
 
-![img.png](image/img.png)
+![image](https://github.com/hamdrew-jl/python_notebook/assets/141601957/968651f1-c7e0-4afa-8e39-fe5a29cc486c)
+
 
 ## 2. Grab coor data from the image
 ### 2.1 Get mouse click coordinates in Python turtle 
@@ -30,11 +32,15 @@ turtle.mainloop()
 * Check the mistake
 * Save as .csv file
 
-![img_4.png](image/img_4.png)
+![image](https://github.com/hamdrew-jl/python_notebook/assets/141601957/dc2f1bf9-5e5f-4ba1-83f2-6b2f6c015507)
 
-* file preparation
 
-![img_3.png](image/img_3.png)
+* File preparation
+main.py
+animal_guess.csv
+grab_coor.py
+image(cover and main background picture)
+
 
 ## 3.Steps
 ### 3.1 Import and set screen
@@ -64,7 +70,8 @@ all_animals = data["name"].to_list()  # DO NOT FORGET ()
 ```
 ### 3.3 Main loop
 
-![img_6.png](image/img_6.png)
+![image](https://github.com/hamdrew-jl/python_notebook/assets/141601957/52b13fcc-7db5-4c89-87c1-0cc3242bd26a)
+
 
 ```python
 guess_animals = []
@@ -117,7 +124,8 @@ ADJUST_Y = -10
 ```
 * Add guessed word on the list 
 
-![img_5.png](image/img_5.png)
+![image](https://github.com/hamdrew-jl/python_notebook/assets/141601957/3d3a24da-e0ce-4a6d-b0b1-a4af23ad355c)
+
 
 ```python
 y_word = [47, 41, 35, 29, 23, 17, 11, 5, -1, -7, -13, -19, -25, -31, -37, -43, -49, -55, -61, -67, -73,
