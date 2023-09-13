@@ -23,11 +23,12 @@ while len(already_guessed) < 50:
                                     prompt="What's another state's name?").title()
     if answer_state == "Exit":
 
-        # create states_to_learn.csv
-        missing_states = []
-        for state in state_list:
-            if state not in already_guessed:
-                missing_states.append(state)
+        # create states_to_learn.csv, use list comprehension save lines
+        # missing_states = []
+        # for state in state_list:
+        #     if state not in already_guessed:
+        #         missing_states.append(state)
+        missing_states = [state for state in state_list if state not in already_guessed]
         new_data = pandas.DataFrame(missing_states)
         new_data.to_csv("states_to_learn.csv")
 
