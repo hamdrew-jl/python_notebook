@@ -36,10 +36,10 @@ turtle.mainloop()
 
 
 * File preparation
-main.py
-animal_guess.csv
-grab_coor.py
-image(cover and main background picture)
+1. main.py
+2. animal_guess.csv
+3. grab_coor.py
+4. image(cover and main background picture)
 
 
 ## 3.Steps
