@@ -1,7 +1,7 @@
 # Password manager
-___
+
 ## Objective
-___
+
 * Safely storage your password and account in your computer
 
 ![img_1.png](img/img_1.png)
